@@ -1,5 +1,5 @@
-import Link from 'next/link'
-import styles from '@/styles/Home.module.css'
+import Link from "next/link";
+import styles from "@/styles/Home.module.css";
 // http://localhost:3000/products
 export default function ProductsList() {
   return (
@@ -8,18 +8,18 @@ export default function ProductsList() {
         <h2 className={styles.title}>商品一覧</h2>
         <ul>
           <li>
-            <Link href="/products/smartphone" legacyBehavior>
-              <a>スマートフォン</a>
+            <Link href="/products/smartPhone">
+              スマートフォン
             </Link>
           </li>
           <li>
-            <Link href="/products/pc" legacyBehavior>
-              <a>パソコン</a>
+            <Link href="/products/pc">
+              パソコン
             </Link>
           </li>
           <li>
-            <Link href="/products/headph" legacyBehavior>
-              <a>ヘッドフォン</a>
+            <Link href="/products/headPhone">
+              ヘッドフォン
             </Link>
           </li>
         </ul>
