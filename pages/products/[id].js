@@ -7,29 +7,41 @@ import Link from 'next/link'
 import styles from '@/styles/Home.module.css'
 
 /// SSG getStaticProps と getStaticPaths を書く必要がある。
-export async function getStaticProps({ params }) {
-  // publicディレクトリのjsonファイルを読み込んでいる。
+// export async function getStaticProps({ params }) {
+//   // publicディレクトリのjsonファイルを読み込んでいる。
+//   const req = await fetch(`http://localhost:3000/${params.id}.json`);
+//   const data = await req.json();
+
+//   return {
+//     props: { product: data },
+//   };
+// }
+// export async function getStaticPaths() {
+//   const req = await fetch("http://localhost:3000/products.json");
+//   const data = await req.json();
+//   const paths = data.map((product) => {
+//     return {
+//       params: {
+//         id: product,
+//       },
+//     };
+//   });
+
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
+
+
+// SSR
+export async function getServerSideProps({ params }) {
   const req = await fetch(`http://localhost:3000/${params.id}.json`);
+  // publicディレクトリのjsonファイルを読み込んでいる。
   const data = await req.json();
 
   return {
     props: { product: data },
-  };
-}
-export async function getStaticPaths() {
-  const req = await fetch("http://localhost:3000/products.json");
-  const data = await req.json();
-  const paths = data.map((product) => {
-    return {
-      params: {
-        id: product,
-      },
-    };
-  });
-
-  return {
-    paths,
-    fallback: false,
   };
 }
 
