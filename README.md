@@ -1,7 +1,14 @@
 初めてのNext.js入門！簡単なアプリ実装でNext.jsを基礎から学んでみよう
 https://www.youtube.com/watch?v=eEP7CLqnRr0
+
+git
+https://github.com/Shin-sibainu/nextjs-tutorial
+
 npx create-next-app next-app-tutoriral
 npm run dev
+
+■スニペット
+nafe
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
